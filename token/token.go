@@ -1,12 +1,12 @@
 package token
 
-var keywords = map[string]TokenType {
-	"fn": FUNCTION,
-	"let": LET,
-	"true": TRUE,
-	"false": FALSE,
-	"if": IF,
-	"else": ELSE,
+var keywords = map[string]TokenType{
+	"fn":     FUNCTION,
+	"let":    LET,
+	"true":   TRUE,
+	"false":  FALSE,
+	"if":     IF,
+	"else":   ELSE,
 	"return": RETURN,
 }
 
@@ -25,16 +25,16 @@ const (
 	IDENT = "IDENT" // add, foobar, x, y, ...
 	INT   = "INT"
 	// Operators
-	ASSIGN = "="
-	EQ = "=="
-	NOT_EQ = "!="
-	PLUS   = "+"
-	MINUS = "-"
-	BANG = "!"
+	ASSIGN   = "="
+	EQ       = "=="
+	NOT_EQ   = "!="
+	PLUS     = "+"
+	MINUS    = "-"
+	BANG     = "!"
 	ASTERISK = "*"
-	SLASH = "/"
-	LT = "<"
-	GT = ">"
+	SLASH    = "/"
+	LT       = "<"
+	GT       = ">"
 	// Delimiters
 	COMMA     = ","
 	SEMICOLON = ";"
@@ -45,11 +45,11 @@ const (
 	// Keywords
 	FUNCTION = "FUNCTION"
 	LET      = "LET"
-	TRUE      = "TRUE"
-	FALSE      = "FALSE"
-	IF      = "IF"
-	ELSE      = "ELSE"
-	RETURN      = "RETURN"
+	TRUE     = "TRUE"
+	FALSE    = "FALSE"
+	IF       = "IF"
+	ELSE     = "ELSE"
+	RETURN   = "RETURN"
 )
 
 type TokenType string

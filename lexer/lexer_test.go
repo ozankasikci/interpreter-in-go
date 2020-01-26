@@ -26,8 +26,8 @@ if (5 < 10) {
 10 != 9;
 `
 
-	tests := []struct{
-		expectedType token.TokenType
+	tests := []struct {
+		expectedType    token.TokenType
 		expectedLiteral string
 	}{
 		{token.LET, "let"},

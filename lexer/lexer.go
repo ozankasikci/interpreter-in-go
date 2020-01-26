@@ -3,10 +3,10 @@ package lexer
 import "interpreter-in-go/token"
 
 type Lexer struct {
-	input string
-	position int
+	input        string
+	position     int
 	readPosition int
-	ch byte
+	ch           byte
 }
 
 func New(input string) *Lexer {
@@ -15,8 +15,8 @@ func New(input string) *Lexer {
 	return l
 }
 
-func (l *Lexer) readChar()  {
-	if l.readPosition >= len(l.input)	{
+func (l *Lexer) readChar() {
+	if l.readPosition >= len(l.input) {
 		l.ch = 0
 	} else {
 		l.ch = l.input[l.readPosition]
@@ -77,7 +77,7 @@ func (l *Lexer) NextToken() token.Token {
 		tok = newToken(token.RBRACE, l.ch)
 	case 0:
 		tok.Literal = ""
-        tok.Type = token.EOF
+		tok.Type = token.EOF
 	default:
 		if isLetter(l.ch) {
 			tok.Literal = l.readIdentifier()
@@ -125,7 +125,7 @@ func (l *Lexer) readNumber() string {
 }
 
 func (l *Lexer) peekChar() byte {
-	if l.readPosition >= len(l.input)	{
+	if l.readPosition >= len(l.input) {
 		return 0
 	} else {
 		return l.input[l.readPosition]
