@@ -14,6 +14,7 @@ func identLevel() string {
 }
 
 func tracePrint(fs string) {
+	return
 	fmt.Printf("%s%s\n", identLevel(), fs)
 }
 
