@@ -236,6 +236,7 @@ if (10 > 1) {
 
 		errObj, ok := evaluated.(*object.Error)
 		if !ok {
+			println(tt.input)
 			t.Errorf("no error object returned. got=%T(%+v)",
 				evaluated, evaluated)
 			continue
