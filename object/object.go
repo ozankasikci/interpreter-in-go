@@ -14,6 +14,7 @@ const (
 	RETURN_VALUE_OBJ = "RETURN_VALUE"
 	ERROR_OBJ = "ERROR"
 	FUNCTION_OBJ = "FUNCTION"
+	STRING_OBJ = "STRING"
 )
 
 type ObjectType string
@@ -22,6 +23,14 @@ type Object interface {
 	Type() ObjectType
 	Inspect() string
 }
+
+type String struct {
+	Value string
+}
+
+func (i *String) Inspect() string { return i.Value }
+func (i *String) Type() ObjectType { return STRING_OBJ }
+
 
 type Integer struct {
 	Value int64
